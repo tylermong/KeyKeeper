@@ -4,8 +4,7 @@
   "description": "A secure and user-friendly desktop application for managing and storing passwrods, built with Electron.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "password-manager",
@@ -19,6 +18,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "electron": "^32.0.1"
+    "electron": "^32.0.1",
+    "electronmon": "^2.0.3"
   }
 }
