@@ -3,28 +3,124 @@
     <head>
         <meta charset="UTF-8">
         <title>Login</title>
-        
+        <style>
+
+            body {
+                background-color: #14191e;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+                height: 100%;
+            }
+
+            h1 {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 48px;
+            }
+            .name-and-icon {
+                color: rgb(255, 255, 255);
+                display: flex;
+                align-items: center;
+                margin: auto;
+            }
+
+            .name-and-icon svg {
+                margin-right: 5px;
+            }
+
+            .login-container input {
+                width: 100%;
+                padding: 8px 0;
+                margin: 4px 0;
+                background-color: #30343c;
+                color: #ffffff;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .login-container input::placeholder {
+                color: #ffffff;
+                padding: 0 4px;
+            }
+
+            .login-container button {
+                background-color: #092b71;
+                border: none;
+                border-radius: 5px;
+                padding: 8px 0;
+                margin: 4px 0;
+                width: 30%;
+            }
+
+            .login-button {
+                display: flex;
+                justify-content: end;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                justify-content: center;
+                
+
+            }
+
+            .header-container {
+                display: flex;
+                height: 20%;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .login-container {
+                display: flex;
+                height: 60%;
+                justify-content: center;
+                align-items: center;
+                
+            }
+
+            .footer-container {
+                display: flex;
+                height: 20%;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+
+
+
+
+        </style>
     </head>
 
     <body>
-    <div class="header-container">
-        <h1>Password Manager</h1>
-    </div>
-
-
-    <div class="login-container">
-        <form method="post">
-            <input type="text" name="username" placeholder="Username" required><br>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-    </div>
-
+        <div class="container">
+            <div class="header-container">
+                <div class="name-and-icon">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="72"  height="72"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-lock"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" /><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M8 11v-4a4 4 0 1 1 8 0v4" /></svg>
+                    <h1>Password Manager</h1>
+                </div>
+            </div>
     
-    <div class="footer-container">
-        <footer>test</footer>
-    </div>
+            <div class="login-container">
+                <form method="post">
+                    <input type="text" name="username" placeholder="Username" required><br>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <div class="login-button">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+    
+            <div class="footer-container">
+                <footer>test</footer>
+            </div>
+        </div>
     </body>
-
-
 </html>
