@@ -7,7 +7,7 @@
             html {
                 height: 100%;
             }
-            
+
             body {
                 background-color: #14191e;
                 display: flex;
@@ -19,9 +19,20 @@
                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             }
 
-            h1 {
-                font-size: 48px;
+            .container {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                justify-content: center;
             }
+
+            .header-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
             .name-and-icon {
                 color: rgb(255, 255, 255);
                 display: flex;
@@ -31,6 +42,16 @@
 
             .name-and-icon svg {
                 margin-right: 5px;
+            }
+
+            .name-and-icon h1 {
+                font-size: 48px;
+            }
+
+            .login-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
             .login-container form {
@@ -61,35 +82,13 @@
                 width: 25%;
             }
 
-            .login-button {
+            .login-button-container {
                 display: flex;
                 justify-content: end;
             }
 
-            .login-button button {
+            .login-button-container button {
                 color: white;
-            }
-
-            .container {
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-                width: 100%;
-                justify-content: center;
-            }
-
-            .header-container {
-                display: flex;
-                height: 20%;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .login-container {
-                display: flex;
-                height: 50%;
-                justify-content: center;
-                align-items: center;
             }
         </style>
     </head>
@@ -107,7 +106,7 @@
                 <form method="post">
                     <input type="text" name="username" placeholder="Username" required><br>
                     <input type="password" name="password" placeholder="Password" required>
-                    <div class="login-button">
+                    <div class="login-button-container">
                         <button type="submit">Login</button>
                     </div>
                 </form>
