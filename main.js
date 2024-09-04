@@ -10,7 +10,7 @@ function createMainWindow() {
     });
  
     const startUrl = url.format({
-        pathname: path.join(__dirname, 'login.html'),
+        pathname: path.join(__dirname, 'vault.html'),
         protocol: 'file:',
     });
 

@@ -5,8 +5,9 @@
         <title>Vault</title>
         <style>
 
-            body {
+            html, body {
                 background-color: #14191e;
+                height: 100%;
             }
 
             .main-name-and-icon {
@@ -21,20 +22,32 @@
             }
 
             .main-name-and-icon svg {
-                margin-right: 5px;
+                margin-right: 12px;
             }
 
             .name-and-icon h2 {
-                font-size: 12px;
+                font-size: 24px;
             }
 
-            .menu-options-one {
+            .container {
+                height: 100%;
+            }
+
+            .menu-options {
                 color: rgb(255, 255, 255);
                 display: flex;
-                align-items: center;
+                align-items: start;
                 margin: auto;
+                border: 5px solid red;
+                flex-direction: column;
+                height: 100%;
+                width: 15%;
             }
 
+            .menu-option a{
+                font-size: 24px;
+                padding: 5px;
+            }
 
 
         </style>
@@ -42,15 +55,23 @@
 
 
     <body>
-        <div class="header-container">
-            <div class="main-name-and-icon">
-                <svg xmlns="http://www.w3.org/2000/svg"  width="36"  height="36"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-lock"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" /><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M8 11v-4a4 4 0 1 1 8 0v4" /></svg>
-                <h1>KeyKeeper</h1>
+        <div class="container">
+            <div class="header-container">
+                <div class="main-name-and-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg"  width="36"  height="36"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-lock"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" /><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M8 11v-4a4 4 0 1 1 8 0v4" /></svg>
+                    <h1>KeyKeeper</h1>
+                </div>
             </div>
-        </div>
-
-        <div class="menu-options-one">
-            <h2>Vault</h2>
+    
+            <div class="menu-options">
+                <div class="menu-option">
+                    <a href="vault.html">Vault</a>
+                </div>
+    
+                <div class="menu-option">
+                    <a href="settings.html">Settings</a>
+                </div>
+            </div>
         </div>
 
     </body>
