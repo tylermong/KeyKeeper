@@ -5,12 +5,12 @@ const path = require('path');
 function createMainWindow() {
     const mainWindow = new BrowserWindow({
         title: 'Main Window Title',
-        width: 960,
+        width: 1280,
         height: 720,
     });
  
     const startUrl = url.format({
-        pathname: path.join(__dirname, 'login.html'),
+        pathname: path.join(__dirname, 'vault.html'),
         protocol: 'file:',
     });
 
