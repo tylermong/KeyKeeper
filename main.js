@@ -10,11 +10,11 @@ function createMainWindow() {
     });
  
     const startUrl = url.format({
-        pathname: path.join(__dirname, 'vault.html'),
+        pathname: path.join(__dirname, 'settings.html'),
         protocol: 'file:',
     });
 
     mainWindow.loadURL(startUrl);
 }
 
-app.whenReady().then(createMainWindow);
+app.whenReady().then(createMainWindow); 

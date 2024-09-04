@@ -2,62 +2,101 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Vault</title>
+        <title>Settings</title>
         <style>
-
-            body {
+            html, body {
                 background-color: #14191e;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             }
 
-            .main-name-and-icon {
-                color: rgb(255, 255, 255);
+            .container {
                 display: flex;
+                flex-direction: row;
+                height: 100%;
+                width: 100%;
+            }
+
+            .menu-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
                 align-items: center;
-                margin: auto;
+                width: 15%;
+                border-right: 2px solid gray;
+                color: #ffffff;
             }
 
-            .main-name-and-icon h1 {
-                font-size: 24px;
-            }
-
-            .main-name-and-icon svg {
-                margin-right: 5px;
-            }
-
-            .name-and-icon h2 {
-                font-size: 12px;
+            .menu-options {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                width: 100%;
+                background-color: #14191e;
+                
             }
 
             .menu-option {
-                color: rgb(255, 255, 255);
                 display: flex;
+                width: 100%;
+                justify-content: start;
                 align-items: center;
-                margin: auto;
+                font-size: 18px;
+                padding: 10px 0 10px 10px;
+                box-sizing: border-box;
             }
 
+            .menu-option a {
+                text-decoration: none;
+                color: #ffffff;
+                width: 100%;
+            }
 
+            .menu-header {
+                display: flex;
+                width: 100%;
+                height: 10%;
+                background-color: #14191e;
+                border-bottom: 2px solid gray;
+            }
 
+            .menu-header h1 {
+                font-size: 24px;
+                margin: 0;
+            }
+
+            .name-and-icon {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: auto;
+                width: 80%;
+            }
         </style>
     </head>
 
-
     <body>
-        <div class="header-container">
-            <div class="main-name-and-icon">
-                <svg xmlns="http://www.w3.org/2000/svg"  width="36"  height="36"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-lock"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" /><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M8 11v-4a4 4 0 1 1 8 0v4" /></svg>
-                <h1>KeyKeeper</h1>
+        <div class="container">
+            <div class="menu-container">
+                <div class="menu-header">
+                    <div class="name-and-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-key"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.555 3.843l3.602 3.602a2.877 2.877 0 0 1 0 4.069l-2.643 2.643a2.877 2.877 0 0 1 -4.069 0l-.301 -.301l-6.558 6.558a2 2 0 0 1 -1.239 .578l-.175 .008h-1.172a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.172a2 2 0 0 1 .467 -1.284l.119 -.13l.414 -.414h2v-2h2v-2l2.144 -2.144l-.301 -.301a2.877 2.877 0 0 1 0 -4.069l2.643 -2.643a2.877 2.877 0 0 1 4.069 0z" /><path d="M15 9h.01" /></svg>
+                        <h1>KeyKeeper</h1>
+                    </div>
+                </div>
+                <div class="menu-options">
+                    <div class="menu-option">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-lock"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" /><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M8 11v-4a4 4 0 1 1 8 0v4" /></svg>
+                        <a href="vault.html">Vault</a>
+                    </div>
+                    <div class="menu-option">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-settings"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.647 4.081a.724 .724 0 0 0 1.08 .448c2.439 -1.485 5.23 1.305 3.745 3.744a.724 .724 0 0 0 .447 1.08c2.775 .673 2.775 4.62 0 5.294a.724 .724 0 0 0 -.448 1.08c1.485 2.439 -1.305 5.23 -3.744 3.745a.724 .724 0 0 0 -1.08 .447c-.673 2.775 -4.62 2.775 -5.294 0a.724 .724 0 0 0 -1.08 -.448c-2.439 1.485 -5.23 -1.305 -3.745 -3.744a.724 .724 0 0 0 -.447 -1.08c-2.775 -.673 -2.775 -4.62 0 -5.294a.724 .724 0 0 0 .448 -1.08c-1.485 -2.439 1.305 -5.23 3.744 -3.745a.722 .722 0 0 0 1.08 -.447c.673 -2.775 4.62 -2.775 5.294 0zm-2.647 4.919a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z" /></svg>
+                        <a href="settings.html">Settings</a>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="menu-options">
-            <div class="menu-option">
-                <a href="vault.html">Vault</a>
-            </div>
-
-            <div class="menu-option">
-                <a href="settings.html">Settings</a>
-            </div>
-        </div>
-
     </body>
 </html>
