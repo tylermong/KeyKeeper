@@ -122,6 +122,16 @@
                 background-color: #242d36;
                 color: #ffffff;
             }
+
+            .top-bar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                background-color: #14191e;
+                padding: 10px;
+                box-sizing: border-box;
+            }
         </style>
     </head>
 
@@ -147,23 +157,22 @@
             </div>
 
             <div class="center-container">
-                <h1>Vault</h1>
+                <div class = top-bar>
+                    <h1>Vault</h1>
+                    <button>+</button>
+                </div>
                 <div class="vault-container">
                     <div class="credential">
-                        <button>Facebook</button>
-                    </div>
-                    <div class="credential">
-                        <button>Instagram</button>
-                    </div>
-                    <div class="credential">
-                        <button>Twitter</button>
+                        <button id="facebook">Facebook</button>
+                        <button id="google">Google</button>
                     </div>
                 </div>
             </div>
 
-            <div class="right-container">
+            <div class="right-container" id="right-container">
                 <h1>Right Container</h1>
             </div>
         </div>
+        <script src="../js/vault.js"></script>
     </body>
 </html>
