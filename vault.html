@@ -24,7 +24,7 @@
                 flex-direction: column;
                 justify-content: start;
                 align-items: center;
-                width: 15%;
+                width: 20%;
                 border-right: 2px solid gray;
                 color: #ffffff;
             }
@@ -77,9 +77,53 @@
                 margin: auto;
                 width: 80%;
             }
+
+            .center-container {
+                display: flex;
+                justify-content: start;
+                align-items: start;
+                width: 40%;
+                background-color: #242d36;
+                color: #ffffff;
+                border-right: 2px solid gray;
+                flex-direction: column;
+            }
+
+            .vault-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                width: 100%;
+            }
+
+            .credential {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                width: 100%;
+            }
+
+            .credential button {
+                background-color: #242d36;
+                color: #ffffff;
+                border: 2px solid gray;
+                padding: 10px;
+                font-size: 18px;
+                width: 100%;
+                text-align: start;
+            }
+
+            .right-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                background-color: #242d36;
+                color: #ffffff;
+            }
         </style>
     </head>
-
 
     <body>
         <div class="container">
@@ -100,6 +144,25 @@
                         <a href="settings.html">Settings</a>
                     </div>
                 </div>
+            </div>
+
+            <div class="center-container">
+                <h1>Vault</h1>
+                <div class="vault-container">
+                    <div class="credential">
+                        <button>Facebook</button>
+                    </div>
+                    <div class="credential">
+                        <button>Instagram</button>
+                    </div>
+                    <div class="credential">
+                        <button>Twitter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-container">
+                <h1>Right Container</h1>
             </div>
         </div>
     </body>
