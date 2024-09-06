@@ -118,7 +118,6 @@
             .right-container {
                 display: flex;
                 justify-content: center;
-                align-items: center;
                 width: 40%;
                 background-color: #242d36;
                 color: #ffffff;
@@ -132,6 +131,16 @@
                 background-color: #14191e;
                 padding: 10px;
                 box-sizing: border-box;
+            }
+
+            .credential-field
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                width: 100%;
+                padding-left: 10px;
             }
         </style>
     </head>
@@ -160,7 +169,7 @@
             <div class="center-container">
                 <div class = top-bar>
                     <h1>Vault</h1>
-                    <button>+</button>
+                    <button id="add-credential">+</button>
                 </div>
                 <div class="vault-container">
                     <div class="credential">
@@ -175,5 +184,6 @@
             </div>
         </div>
         <script src="../js/vault.js"></script>
+        <script src="../js/credentialManager.js"></script>
     </body>
 </html>
