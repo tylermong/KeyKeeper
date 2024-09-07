@@ -32,13 +32,12 @@ createCredential.addEventListener('click', function() {
         };
 
         let credentials = [];
-        
-        if(!fs.existsSync('credentials.json')) {
+
+        if (!fs.existsSync('credentials.json'))
             fs.writeFileSync('credentials.json', '[]');
-        }
-        if (fs.existsSync('credentials.json')) {
+
+        if (fs.existsSync('credentials.json'))
             credentials = JSON.parse(fs.readFileSync('credentials.json'));
-        }
         
         credentials.push(newCredential);
 
