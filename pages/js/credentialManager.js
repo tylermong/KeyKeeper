@@ -44,3 +44,32 @@ createCredential.addEventListener('click', function() {
         fs.writeFileSync('credentials.json', JSON.stringify(credentials, null, 2));
     });
 });
+
+function loadCredentialButtons() {
+    const vaultContainer = document.getElementById('vault-container');
+    if (fs.existsSync('credentials.json')) {
+        const credentials = JSON.parse(fs.readFileSync('credentials.json'));
+        let buttonsHTML = '';
+        credentials.forEach(credential => {
+            buttonsHTML += `<button class="credential">${credential.name}</button>`;
+        });
+        vaultContainer.innerHTML = buttonsHTML;
+    }
+}
+window.onload = loadCredentialButtons;
+
+const vaultContainer = document.getElementById('vault-container');
+vaultContainer.addEventListener('click', function(event) {
+    if (event.target.classList.contains('credential')) {
+        const credentialName = event.target.textContent;
+        const credentials = JSON.parse(fs.readFileSync('credentials.json'));
+        const credential = credentials.find(c => c.name === credentialName);
+        if (credential) {
+            rightContainer.innerHTML = `
+                <p class="display-credential">Name: ${credential.name}</p>
+                <p class="display-credential">Username: ${credential.username}</p>
+                <p class="display-credential">Password: ${credential.password}</p>
+            `;
+        }
+    }
+});

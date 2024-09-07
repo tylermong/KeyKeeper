@@ -99,24 +99,20 @@
 
             .credential {
                 display: flex;
-                justify-content: start;
-                align-items: center;
-                width: 100%;
                 flex-direction: column;
-            }
-
-            .credential button {
+                justify-content: start;
+                align-items: start;
+                width: 100%;
+                padding: 10px;
                 background-color: #242d36;
                 color: #ffffff;
-                border: 2px solid gray;
-                padding: 10px;
+                border: 1px solid gray;
                 font-size: 18px;
-                width: 100%;
-                text-align: start;
             }
 
             .right-container {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 width: 40%;
                 background-color: #242d36;
@@ -133,14 +129,26 @@
                 box-sizing: border-box;
             }
 
-            .credential-field
-            {
+            .credential-field {
                 display: flex;
                 flex-direction: column;
                 justify-content: start;
                 align-items: start;
                 width: 100%;
                 padding-left: 10px;
+            }
+
+            .display-credential {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                width: 100%;
+                padding: 10px;
+                background-color: #242d36;
+                color: #ffffff;
+                border: 1px solid gray;
+                font-size: 18px;
             }
         </style>
     </head>
@@ -171,10 +179,8 @@
                     <h1>Vault</h1>
                     <button id="add-credential">+</button>
                 </div>
-                <div class="vault-container">
-                    <div class="credential">
-                        <!-- dynamically add buttons here -->
-                    </div>
+                <div class="vault-container" id="vault-container">
+                    <!-- dynamically add credentials here -->
                 </div>
             </div>
 
