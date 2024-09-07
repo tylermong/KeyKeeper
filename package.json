@@ -1,10 +1,9 @@
 {
-  "name": "password-manager",
-  "version": "0.0.1",
+  "name": "keykeeper",
+  "version": "0.1.0",
   "description": "A secure and user-friendly desktop application for managing and storing passwrods, built with Electron.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "password-manager",
