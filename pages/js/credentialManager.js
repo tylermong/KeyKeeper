@@ -4,18 +4,18 @@ const rightContainer = document.getElementById('right-container');
 
 createCredential.addEventListener('click', function() {
     rightContainer.innerHTML =
-        `<form id="credential-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
-            
-            <input type="submit" value="Submit">
-        </form>
+        `<h1>Add Credential</h1>
+
+        <div class="credential-container">
+            <h2>Credential Details</h2>
+            <form id="credential-form">
+                <input type="text" id="name" name="name" placeholder="Name" required><br><br>
+                <input type="text" id="username" name="username" placeholder="Username"required><br><br>
+                <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+                
+                <input type="submit" id="save" value="Save">
+            </form>
+        </div
     `;
 
     const form = document.getElementById('credential-form');
