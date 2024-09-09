@@ -72,10 +72,14 @@
 
             .name-and-icon {
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
                 margin: auto;
                 width: 80%;
+            }
+
+            .name-and-icon svg {
+                margin-right: 10px;
             }
 
             .center-container {
@@ -150,6 +154,24 @@
                 border: 1px solid gray;
                 font-size: 18px;
                 box-sizing: border-box;
+            }
+
+            #add-credential {
+                display: flex;
+                justify-content: center;
+                background-color: #14191e;
+                color: #ffffff;
+                border: 2px solid hsl(210, 20%, 20%);
+                border-radius: 5%;
+                font-size: 24px;
+                padding: 10px;
+                cursor: pointer;
+                height: 50%;
+                align-items: center;
+            }
+
+            #add-credential:hover {
+                background-color: #242d36;
             }
         </style>
     </head>
