@@ -51,7 +51,7 @@ function loadCredentialButtons() {
         const credentials = JSON.parse(fs.readFileSync('credentials.json'));
         let buttonsHTML = '';
         credentials.forEach(credential => {
-            buttonsHTML += `<button class="credential">${credential.name}</button>`;
+            buttonsHTML += `<button class="vault-credential">${credential.name}</button>`;
         });
         vaultContainer.innerHTML = buttonsHTML;
     }
