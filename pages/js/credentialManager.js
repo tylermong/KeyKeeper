@@ -60,7 +60,7 @@ window.onload = loadCredentialButtons;
 
 const vaultContainer = document.getElementById('vault-container');
 vaultContainer.addEventListener('click', function(event) {
-    if (event.target.classList.contains('credential')) {
+    if (event.target.classList.contains('vault-credential')) {
         const credentialName = event.target.textContent;
         const credentials = JSON.parse(fs.readFileSync('credentials.json'));
         const credential = credentials.find(c => c.name === credentialName);
@@ -69,6 +69,10 @@ vaultContainer.addEventListener('click', function(event) {
                 <p class="display-credential">Name: ${credential.name}</p>
                 <p class="display-credential">Username: ${credential.username}</p>
                 <p class="display-credential">Password: ${credential.password}</p>
+                <div class="credential-buttons">
+                    <button id="edit-credential">Edit</button>
+                    <button id="delete-credential">Delete</button>
+                </div>
             `;
         }
     }
