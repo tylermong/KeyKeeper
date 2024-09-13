@@ -77,3 +77,43 @@ vaultContainer.addEventListener('click', function(event) {
         }
     }
 });
+
+rightContainer.addEventListener('click', function(event) {
+    if (event.target.id === 'edit-credential') {
+        const credentialName = document.querySelector('.display-credential').textContent.split(': ')[1];
+        const credentials = JSON.parse(fs.readFileSync('credentials.json'));
+        const credential = credentials.find(c => c.name === credentialName);
+        if (credential) {
+            rightContainer.innerHTML = `
+                <h1>Edit Credential</h1>
+                <div class="credential-container">
+                    <h2>Credential Details</h2>
+                    <form id="edit-credential-form">
+                        <input type="text" id="edit-name" name="name" value="${credential.name}" required><br><br>
+                        <input type="text" id="edit-username" name="username" value="${credential.username}" required><br><br>
+                        <input type="password" id="edit-password" name="password" value="${credential.password}" required><br><br>
+                        <input type="submit" id="save-edit" value="Save">
+                    </form>
+                </div>
+            `;
+            const editForm = document.getElementById('edit-credential-form');
+            editForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                credential.name = document.getElementById('edit-name').value;
+                credential.username = document.getElementById('edit-username').value;
+                credential.password = document.getElementById('edit-password').value;
+
+                fs.writeFileSync('credentials.json', JSON.stringify(credentials, null, 2));
+                loadCredentialButtons();
+                loadCredentialDetails(credential.name);
+            });
+        }
+    } else if (event.target.id === 'delete-credential') {
+        const credentialName = document.querySelector('.display-credential').textContent.split(': ')[1];
+        let credentials = JSON.parse(fs.readFileSync('credentials.json'));
+        credentials = credentials.filter(c => c.name !== credentialName);
+        fs.writeFileSync('credentials.json', JSON.stringify(credentials, null, 2));
+        loadCredentialButtons();
+        rightContainer.innerHTML = '';
+    }
+});
