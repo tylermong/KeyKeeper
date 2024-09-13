@@ -176,8 +176,31 @@
                 box-sizing: border-box;
             }
 
+            #credential-form #password {
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+
             #credential-form input::placeholder {
                 color: #ffffff;
+            }
+
+            #credential-form .password-container {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #credential-form img, #edit-credential-form img {
+                width: 20px;
+                height: 20px;
+                padding: 15px;
+                color: white;
+                cursor: pointer;
+                background-color: #2d3843;
+                border: 1px solid gray;
+                border-radius: 5px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
             }
 
             .display-credential {

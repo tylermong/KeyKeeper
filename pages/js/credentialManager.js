@@ -11,8 +11,10 @@ createCredential.addEventListener('click', function() {
             <form id="credential-form">
                 <input type="text" id="name" name="name" placeholder="Name" required><br><br>
                 <input type="text" id="username" name="username" placeholder="Username"required><br><br>
-                <input type="password" id="password" name="password" placeholder="Password" required><br><br>
-                
+                <div class = "password-container">
+                    <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+                    <img src="../../images/eye-closed.png" id="eye" onclick="showPassword()">
+                </div>
                 <input type="submit" id="save" value="Save">
             </form>
         </div
@@ -44,6 +46,18 @@ createCredential.addEventListener('click', function() {
         fs.writeFileSync('credentials.json', JSON.stringify(credentials, null, 2));
     });
 });
+
+function showPassword() {
+    const passwordInput = document.getElementById('password');
+    const eyeClosed = document.getElementById('eye');
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        eyeClosed.src = '../../images/eye-open.png';
+    } else {
+        passwordInput.type = 'password';
+        eyeClosed.src = '../../images/eye-closed.png';
+    }
+}
 
 function loadCredentialButtons() {
     const vaultContainer = document.getElementById('vault-container');
